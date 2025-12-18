@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Klasifikasi Lingkungan Berbasis AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LOGIN -->
+    <div class="container" id="loginPage">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- HALAMAN UTAMA -->
+    <div class="container hidden" id="mainPage">
+        <h2>KLASIFIKASI LINGKUNGAN BERBASIS AI</h2>
+        <p class="subtitle">Edukasi Sosial Berbasis Teknologi Artificial Intelligence</p>
+
+        <div class="upload-box">
+            <label>Unggah Gambar Lingkungan</label>
+            <input type="file" accept="image/*" onchange="processImage(event)">
+            <img id="preview">
+        </div>
+
+        <!-- HASIL AI -->
+        <div class="result hidden" id="resultBox">
+            <h3>Hasil Klasifikasi AI</h3>
+            <p id="classification"></p>
+            <p id="education"></p>
+        </div>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- LOGOUT -->
+    <div class="container hidden" id="logoutPage">
+        <h2>Logout Berhasil</h2>
+        <p>Terima kasih telah berkontribusi dalam edukasi lingkungan 🌍</p>
+        <button onclick="backToLogin()">Login Kembali</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
